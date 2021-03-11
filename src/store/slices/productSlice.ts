@@ -12,7 +12,7 @@ const initialState: ProductState = {
   error: null,
 };
 
-const counterSlice = createSlice({
+const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
@@ -30,7 +30,7 @@ const counterSlice = createSlice({
   },
 });
 
-const { actions, reducer } = counterSlice;
+const { actions, reducer } = productSlice;
 
 export const {
   GET_PRODUCTS,
