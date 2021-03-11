@@ -11,7 +11,9 @@ type Store = {
 const Products = () => {
   const dispatch = useDispatch();
 
-  const { products, isLoading } = useSelector(({ product }: Store) => product);
+  const { products, isLoading } = useSelector<Store, ProductState>(
+    ({ product }) => product
+  );
 
   useEffect(() => {
     dispatch(GET_PRODUCTS());
