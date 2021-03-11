@@ -1,4 +1,3 @@
-import React from "react";
 import { Logo, Cart } from "components";
 import * as S from "./styles";
 

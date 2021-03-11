@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ReactComponent as CloseIcon } from "assets/icons/close.svg";
 import { ReactComponent as BagIcon } from "assets/icons/bag.svg";
 import { ReactComponent as TrashIcon } from "assets/icons/trash.svg";

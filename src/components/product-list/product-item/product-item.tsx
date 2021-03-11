@@ -1,4 +1,3 @@
-import React from "react";
 import { formatCurrency } from "utils/helpers";
 import * as S from "./styles";
 

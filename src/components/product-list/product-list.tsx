@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import * as S from "./styles";
 import ProductItem from "./product-item/product-item";

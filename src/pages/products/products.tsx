@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Header, Footer, Cart, Spinner, ProductList } from "components";
 import { useDispatch, useSelector } from "react-redux";
 import { GET_PRODUCTS, ProductState } from "store/slices/productSlice";

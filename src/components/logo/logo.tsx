@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./styles";
 import { ReactComponent as IoasysLogo } from "assets/icons/logo.svg";
 
