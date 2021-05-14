@@ -1,23 +1,14 @@
 import * as S from "./styles";
 import { useEffect } from "react";
 import { Header, Footer, Cart, Spinner, ProductList } from "components";
-import { useDispatch, useSelector } from "react-redux";
-import { GET_PRODUCTS, ProductState } from "store/slices/productSlice";
-
-type Store = {
-  product: ProductState;
-};
+import { useProductStore } from "store/products";
 
 const Products = () => {
-  const dispatch = useDispatch();
-
-  const { products, isLoading } = useSelector<Store, ProductState>(
-    ({ product }) => product
-  );
+  const { getProducts, products, isLoading } = useProductStore();
 
   useEffect(() => {
-    dispatch(GET_PRODUCTS());
-  }, [dispatch]);
+    getProducts();
+  }, [getProducts]);
 
   return (
     <S.ProductsWrapper>
