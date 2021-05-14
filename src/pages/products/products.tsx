@@ -1,23 +1,24 @@
 import * as S from "./styles";
-import { useEffect } from "react";
 import { Header, Footer, Cart, Spinner, ProductList } from "components";
-import { useProductStore } from "store/products";
+import { useAtom } from "jotai";
+import { fetchProductAtom } from "store/products";
+import { useEffect } from "react";
 
 const Products = () => {
-  const { getProducts, products, isLoading } = useProductStore();
+  const [data, fetch] = useAtom(fetchProductAtom);
 
   useEffect(() => {
-    getProducts();
-  }, [getProducts]);
+    fetch();
+  }, [fetch]);
 
   return (
     <S.ProductsWrapper>
       <Header />
       <S.Section>
-        {isLoading ? (
+        {data.isLoading ? (
           <Spinner />
         ) : (
-          products?.map(({ categoryTitle, products }, index) => (
+          data.products?.map(({ categoryTitle, products }, index) => (
             <ProductList
               key={index}
               categoryTitle={categoryTitle}

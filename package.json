@@ -19,6 +19,7 @@
     "@types/styled-components": "^5.1.7",
     "axios": "^0.21.1",
     "concurrently": "^6.0.0",
+    "jotai": "^0.16.4",
     "json-server": "^0.16.3",
     "polished": "^4.1.1",
     "react": "^17.0.1",
